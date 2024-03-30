@@ -1,0 +1,13 @@
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Projetos\apCaminhosEmMarte\bin\Debug\apCaminhosEmMarte.exe.config
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Projetos\apCaminhosEmMarte\bin\Debug\apCaminhosEmMarte.exe
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Projetos\apCaminhosEmMarte\bin\Debug\apCaminhosEmMarte.pdb
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Projetos\apCaminhosEmMarte\obj\Debug\apCaminhosEmMarte.csproj.AssemblyReference.cache
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Projetos\apCaminhosEmMarte\obj\Debug\apCaminhosEmMarte.FrmCaminhos.resources
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Projetos\apCaminhosEmMarte\obj\Debug\apCaminhosEmMarte.Properties.Resources.resources
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Projetos\apCaminhosEmMarte\obj\Debug\apCaminhosEmMarte.csproj.GenerateResource.cache
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Projetos\apCaminhosEmMarte\obj\Debug\apCaminhosEmMarte.csproj.CoreCompileInputs.cache
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Projetos\apCaminhosEmMarte\obj\Debug\apCaminhosEmMarte.exe
+P:\59-DesenvSistemas\2024\2oAno\TI221-Estruturas de Dados\1oSemestre\Projetos\apCaminhosEmMarte\obj\Debug\apCaminhosEmMarte.pdb
+Z:\TI221EstDad\apCaminhosEmMarte\obj\Debug\apCaminhosEmMarte.csproj.AssemblyReference.cache
+Z:\TI221EstDad\apCaminhosEmMarte\obj\Debug\apCaminhosEmMarte.exe
+Z:\TI221EstDad\apCaminhosEmMarte\obj\Debug\apCaminhosEmMarte.pdb

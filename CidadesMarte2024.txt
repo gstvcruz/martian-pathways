@@ -1,0 +1,23 @@
+Acheron        0,113530,28857
+Arena          0,687260,29248
+Arrakeen       0,052980,48682
+Bakhuysen      0,674560,52002 
+Bradbury       0,407470,74365
+Burroughs      0,712650,37939 
+Cairo          0,216060,51025
+Dumont         0,557370,48096
+Echus Overlook 0,241940,35498
+Esperança      0,789060,52588
+Gondor         0,933110,58545
+Lakefront      0,693360,63818  
+Lowell         0,894530,38428 
+Moria          0,900390,70947
+Nicosia        0,162350,50732
+Odessa         0,633060,67529
+Perseverança   0,665280,81787
+Rowan          0,565670,66553
+Senzeni Na     0,189210,66260
+Sheffield      0,158940,45849
+Temperança     0,513430,67822
+Tharsis        0,129640,39502
+Underhill      0,378910,51318
