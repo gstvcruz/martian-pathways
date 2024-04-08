@@ -3,7 +3,7 @@
 public class HashLinear<T> : ITabelaDeHash<T>
 	where T : IRegistro<T>
 {
-	private const int SIZE = 1001;
+	private const int SIZE = 101;
 	private T[] dados;
 
 	public HashLinear()
@@ -22,7 +22,7 @@ public class HashLinear<T> : ITabelaDeHash<T>
 			tot += chave.Length;
 		
 		int initial_pos = (int)tot;
-		if (dados[initial_pos].Chave == chave) return initial_pos;
+		if (dados[initial_pos] == null) return initial_pos;
 		
 		int pos = initial_pos;
 		bool hasReachedEnd = false;
@@ -60,7 +60,7 @@ public class HashLinear<T> : ITabelaDeHash<T>
 	public bool Existe(T item, out int pos)
 	{
 		pos = Hash(item.Chave);
-		return dados[pos].Equals(item);
+		return dados[pos] != null;
 	}
 
 	public List<T> Conteudo()
