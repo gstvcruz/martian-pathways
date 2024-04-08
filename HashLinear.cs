@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 public class HashLinear<T> : ITabelaDeHash<T>
 	where T : IRegistro<T>
@@ -14,19 +13,17 @@ public class HashLinear<T> : ITabelaDeHash<T>
 
 	public int Hash(string chave)
 	{
-		long hash = 0;
+		long tot = 0;
 		foreach (char c in chave)
-			hash += 37 * hash + c;
+			tot += 37 * tot + c;
 
-		hash %= chave.Length;
-		if (hash < 0)
-			hash += chave.Length;
-		return (int)hash;
-	}
-
-	public void Inserir(T item)
-	{
-		int initial_pos = Hash(item.Chave);
+		tot %= chave.Length;
+		if (tot < 0)
+			tot += chave.Length;
+		
+		int initial_pos = (int)tot;
+		if (dados[initial_pos].Chave == chave) return initial_pos;
+		
 		int pos = initial_pos;
 		bool hasReachedEnd = false;
 		while (dados[pos] != null)
@@ -34,11 +31,19 @@ public class HashLinear<T> : ITabelaDeHash<T>
 			if (pos == dados.Length)
 			{
 				pos = 0;
-				hasReachedEnd = true;			
-			} else if (pos == initial_pos && hasReachedEnd == true) return;
+				hasReachedEnd = true;
+			}
+			else if (pos == initial_pos && hasReachedEnd) return initial_pos;
 			else pos++;
 		}
-		dados[pos] = item;
+		return pos;
+	}
+
+	public void Inserir(T item)
+	{
+		int pos;
+		if (!Existe(item, out pos))
+			dados[pos] = item;
 	}
 
 	public bool Remover(T item)
@@ -55,8 +60,7 @@ public class HashLinear<T> : ITabelaDeHash<T>
 	public bool Existe(T item, out int pos)
 	{
 		pos = Hash(item.Chave);
-		if (dados[pos] != null) return true;
-		else return false;
+		return dados[pos].Equals(item);
 	}
 
 	public List<T> Conteudo()
