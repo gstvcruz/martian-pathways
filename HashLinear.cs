@@ -26,10 +26,10 @@ public class HashLinear<T> : ITabelaDeHash<T>
 
 	public void Inserir(T item)
 	{
-		int pos = Hash(item.Chave);
-		int initial_pos = pos;
+		int initial_pos = Hash(item.Chave);
+		int pos = initial_pos;
 		bool hasReachedEnd = false;
-		while (Existe(item, out pos))
+		while (dados[pos] != null)
 		{
 			if (pos == dados.Length)
 			{
