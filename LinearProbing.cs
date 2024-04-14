@@ -1,5 +1,11 @@
-﻿using System.Collections.Generic;
+﻿/*
+ * 23513 - Diogo Lourenço
+ * 23521 - Gustavo Cruz
+*/
 
+using System.Collections.Generic;
+
+// Implements linear probing
 public class LinearProbing<T> : IHashTable<T>
 	where T : IRegistry<T>
 {
@@ -13,27 +19,29 @@ public class LinearProbing<T> : IHashTable<T>
 
 	public int Hash(string key)
 	{
-		long tot = 0;
+		long hash = 0;
 		foreach (char c in key)
-			tot += 37 * tot + c;
-		tot %= key.Length;
+			hash += 37 * hash + c;
+		hash %= data.Length;
+		if (hash < 0)
+			hash += data.Length;
 		
-		int initialPosition = (int)tot;
-		if (data[initialPosition] == null)
-			return initialPosition;
-
+		int initialPosition = (int)hash;
 		int currentPosition = initialPosition;
 		bool hasReachedEnd = false;
-		// Loop over data positions looking for an empty spot
+		// Loop over hash table positions looking for an empty spot
 		while (data[currentPosition] != null)
 		{
-			if (currentPosition == data.Length)
+			// Hash table end was reached
+			if (currentPosition == data.Length - 1)
 			{
 				currentPosition = 0;
 				hasReachedEnd = true;
 			}
-			else if ((currentPosition == initialPosition) && hasReachedEnd)
+			// No empty spot found after searching the entire hash table
+			if ((currentPosition == initialPosition) && hasReachedEnd)
 				 return initialPosition;
+			// Keep looking for an empty spot
 			else
 				currentPosition++;
 		}
@@ -42,20 +50,18 @@ public class LinearProbing<T> : IHashTable<T>
 
 	public void Insert(T item)
 	{
-		int itemPosition;
-		if (!Exists(item, out itemPosition))
-			data[itemPosition] = item;
+		int itemHashValue;
+		if (!Exists(item, out itemHashValue))
+			data[itemHashValue] = item;
 	}
 
 	public bool Remove(T item)
 	{
 		int itemPosition;
-		if (Exists(item, out itemPosition))
-		{
-			data[itemPosition] = default;
-			return true;
-		}
-		return false;
+		if (!Exists(item, out itemPosition))
+			return false;
+        data[itemPosition] = default;
+        return true;
 	}
 
 	public bool Exists(T item, out int itemPosition)
