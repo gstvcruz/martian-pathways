@@ -1,0 +1,10 @@
+C:\Users\Gustavo\all-out\TI221EstDad\caminhos-em-marte\bin\Debug\Martian Pathways.exe.config
+C:\Users\Gustavo\all-out\TI221EstDad\caminhos-em-marte\bin\Debug\Martian Pathways.exe
+C:\Users\Gustavo\all-out\TI221EstDad\caminhos-em-marte\bin\Debug\Martian Pathways.pdb
+C:\Users\Gustavo\all-out\TI221EstDad\caminhos-em-marte\obj\Debug\apMartianPathways.csproj.AssemblyReference.cache
+C:\Users\Gustavo\all-out\TI221EstDad\caminhos-em-marte\obj\Debug\apMartianPathways.FrmPaths.resources
+C:\Users\Gustavo\all-out\TI221EstDad\caminhos-em-marte\obj\Debug\apMartianPathways.Properties.Resources.resources
+C:\Users\Gustavo\all-out\TI221EstDad\caminhos-em-marte\obj\Debug\apMartianPathways.csproj.GenerateResource.cache
+C:\Users\Gustavo\all-out\TI221EstDad\caminhos-em-marte\obj\Debug\apMartianPathways.csproj.CoreCompileInputs.cache
+C:\Users\Gustavo\all-out\TI221EstDad\caminhos-em-marte\obj\Debug\Martian Pathways.exe
+C:\Users\Gustavo\all-out\TI221EstDad\caminhos-em-marte\obj\Debug\Martian Pathways.pdb

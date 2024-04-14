@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace apCaminhosEmMarte
+namespace apMartianPathways
 {
   internal static class Program
   {
@@ -13,7 +13,7 @@ namespace apCaminhosEmMarte
     {
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
-      Application.Run(new FrmCaminhos());
+      Application.Run(new FrmPaths());
     }
   }
 }

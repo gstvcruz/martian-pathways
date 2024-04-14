@@ -1,6 +1,6 @@
-﻿namespace apCaminhosEmMarte
+﻿namespace apMartianPathways
 {
-  partial class FrmCaminhos
+  partial class FrmPaths
   {
     /// <summary>
     /// Variável de designer necessária.
@@ -28,32 +28,32 @@
     /// </summary>
     private void InitializeComponent()
     {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCaminhos));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPaths));
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tpCidades = new System.Windows.Forms.TabPage();
-            this.pbMapa = new System.Windows.Forms.PictureBox();
-            this.lsbCidades = new System.Windows.Forms.ListBox();
-            this.btnListar = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnRemover = new System.Windows.Forms.Button();
-            this.btnInserir = new System.Windows.Forms.Button();
+            this.tpCities = new System.Windows.Forms.TabPage();
+            this.pbMap = new System.Windows.Forms.PictureBox();
+            this.lsbCities = new System.Windows.Forms.ListBox();
+            this.btnList = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.btnInsert = new System.Windows.Forms.Button();
             this.udY = new System.Windows.Forms.NumericUpDown();
             this.udX = new System.Windows.Forms.NumericUpDown();
-            this.txtCidade = new System.Windows.Forms.TextBox();
+            this.txtCity = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnLerArquivo = new System.Windows.Forms.Button();
-            this.rbHashDuplo = new System.Windows.Forms.RadioButton();
-            this.rbHashQuadratico = new System.Windows.Forms.RadioButton();
-            this.rbHashLinear = new System.Windows.Forms.RadioButton();
-            this.rbBucketHash = new System.Windows.Forms.RadioButton();
-            this.tpCaminhos = new System.Windows.Forms.TabPage();
-            this.dlgAbrir = new System.Windows.Forms.OpenFileDialog();
+            this.btnOpenFile = new System.Windows.Forms.Button();
+            this.rbDoubleHashing = new System.Windows.Forms.RadioButton();
+            this.rbQuadraticProbing = new System.Windows.Forms.RadioButton();
+            this.rbLinearProbing = new System.Windows.Forms.RadioButton();
+            this.rbBucketHashing = new System.Windows.Forms.RadioButton();
+            this.tpPaths = new System.Windows.Forms.TabPage();
+            this.dlgOpen = new System.Windows.Forms.OpenFileDialog();
             this.tabControl1.SuspendLayout();
-            this.tpCidades.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMapa)).BeginInit();
+            this.tpCities.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.udY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.udX)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -64,99 +64,99 @@
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.tpCidades);
-            this.tabControl1.Controls.Add(this.tpCaminhos);
+            this.tabControl1.Controls.Add(this.tpCities);
+            this.tabControl1.Controls.Add(this.tpPaths);
             this.tabControl1.Location = new System.Drawing.Point(4, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1871, 700);
             this.tabControl1.TabIndex = 0;
             // 
-            // tpCidades
+            // tpCities
             // 
-            this.tpCidades.Controls.Add(this.pbMapa);
-            this.tpCidades.Controls.Add(this.lsbCidades);
-            this.tpCidades.Controls.Add(this.btnListar);
-            this.tpCidades.Controls.Add(this.btnBuscar);
-            this.tpCidades.Controls.Add(this.btnRemover);
-            this.tpCidades.Controls.Add(this.btnInserir);
-            this.tpCidades.Controls.Add(this.udY);
-            this.tpCidades.Controls.Add(this.udX);
-            this.tpCidades.Controls.Add(this.txtCidade);
-            this.tpCidades.Controls.Add(this.label3);
-            this.tpCidades.Controls.Add(this.label2);
-            this.tpCidades.Controls.Add(this.label1);
-            this.tpCidades.Controls.Add(this.groupBox1);
-            this.tpCidades.Location = new System.Drawing.Point(4, 22);
-            this.tpCidades.Name = "tpCidades";
-            this.tpCidades.Padding = new System.Windows.Forms.Padding(3);
-            this.tpCidades.Size = new System.Drawing.Size(1863, 674);
-            this.tpCidades.TabIndex = 0;
-            this.tpCidades.Text = "Cidades";
-            this.tpCidades.UseVisualStyleBackColor = true;
+            this.tpCities.Controls.Add(this.pbMap);
+            this.tpCities.Controls.Add(this.lsbCities);
+            this.tpCities.Controls.Add(this.btnList);
+            this.tpCities.Controls.Add(this.btnSearch);
+            this.tpCities.Controls.Add(this.btnRemove);
+            this.tpCities.Controls.Add(this.btnInsert);
+            this.tpCities.Controls.Add(this.udY);
+            this.tpCities.Controls.Add(this.udX);
+            this.tpCities.Controls.Add(this.txtCity);
+            this.tpCities.Controls.Add(this.label3);
+            this.tpCities.Controls.Add(this.label2);
+            this.tpCities.Controls.Add(this.label1);
+            this.tpCities.Controls.Add(this.groupBox1);
+            this.tpCities.Location = new System.Drawing.Point(4, 22);
+            this.tpCities.Name = "tpCities";
+            this.tpCities.Padding = new System.Windows.Forms.Padding(3);
+            this.tpCities.Size = new System.Drawing.Size(1863, 674);
+            this.tpCities.TabIndex = 0;
+            this.tpCities.Text = "Cities";
+            this.tpCities.UseVisualStyleBackColor = true;
             // 
-            // pbMapa
+            // pbMap
             // 
-            this.pbMapa.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pbMap.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbMapa.Image = ((System.Drawing.Image)(resources.GetObject("pbMapa.Image")));
-            this.pbMapa.Location = new System.Drawing.Point(275, 60);
-            this.pbMapa.Name = "pbMapa";
-            this.pbMapa.Size = new System.Drawing.Size(1585, 602);
-            this.pbMapa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbMapa.TabIndex = 12;
-            this.pbMapa.TabStop = false;
+            this.pbMap.Image = ((System.Drawing.Image)(resources.GetObject("pbMap.Image")));
+            this.pbMap.Location = new System.Drawing.Point(275, 60);
+            this.pbMap.Name = "pbMap";
+            this.pbMap.Size = new System.Drawing.Size(1585, 602);
+            this.pbMap.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMap.TabIndex = 12;
+            this.pbMap.TabStop = false;
             // 
-            // lsbCidades
+            // lsbCities
             // 
-            this.lsbCidades.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lsbCities.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.lsbCidades.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lsbCidades.FormattingEnabled = true;
-            this.lsbCidades.ItemHeight = 14;
-            this.lsbCidades.Location = new System.Drawing.Point(10, 193);
-            this.lsbCidades.Name = "lsbCidades";
-            this.lsbCidades.ScrollAlwaysVisible = true;
-            this.lsbCidades.Size = new System.Drawing.Size(259, 466);
-            this.lsbCidades.Sorted = true;
-            this.lsbCidades.TabIndex = 11;
+            this.lsbCities.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lsbCities.FormattingEnabled = true;
+            this.lsbCities.ItemHeight = 14;
+            this.lsbCities.Location = new System.Drawing.Point(10, 193);
+            this.lsbCities.Name = "lsbCities";
+            this.lsbCities.ScrollAlwaysVisible = true;
+            this.lsbCities.Size = new System.Drawing.Size(259, 466);
+            this.lsbCities.Sorted = true;
+            this.lsbCities.TabIndex = 11;
             // 
-            // btnListar
+            // btnList
             // 
-            this.btnListar.Image = ((System.Drawing.Image)(resources.GetObject("btnListar.Image")));
-            this.btnListar.Location = new System.Drawing.Point(148, 156);
-            this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(40, 30);
-            this.btnListar.TabIndex = 10;
-            this.btnListar.UseVisualStyleBackColor = true;
+            this.btnList.Image = ((System.Drawing.Image)(resources.GetObject("btnList.Image")));
+            this.btnList.Location = new System.Drawing.Point(148, 156);
+            this.btnList.Name = "btnList";
+            this.btnList.Size = new System.Drawing.Size(40, 30);
+            this.btnList.TabIndex = 10;
+            this.btnList.UseVisualStyleBackColor = true;
             // 
-            // btnBuscar
+            // btnSearch
             // 
-            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(102, 156);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(40, 30);
-            this.btnBuscar.TabIndex = 9;
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.Location = new System.Drawing.Point(102, 156);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(40, 30);
+            this.btnSearch.TabIndex = 9;
+            this.btnSearch.UseVisualStyleBackColor = true;
             // 
-            // btnRemover
+            // btnRemove
             // 
-            this.btnRemover.Location = new System.Drawing.Point(56, 156);
-            this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(40, 30);
-            this.btnRemover.TabIndex = 8;
-            this.btnRemover.Text = "-";
-            this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemove.Location = new System.Drawing.Point(56, 156);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(40, 30);
+            this.btnRemove.TabIndex = 8;
+            this.btnRemove.Text = "-";
+            this.btnRemove.UseVisualStyleBackColor = true;
             // 
-            // btnInserir
+            // btnInsert
             // 
-            this.btnInserir.Location = new System.Drawing.Point(10, 156);
-            this.btnInserir.Name = "btnInserir";
-            this.btnInserir.Size = new System.Drawing.Size(40, 30);
-            this.btnInserir.TabIndex = 7;
-            this.btnInserir.Text = "+";
-            this.btnInserir.UseVisualStyleBackColor = true;
+            this.btnInsert.Location = new System.Drawing.Point(10, 156);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(40, 30);
+            this.btnInsert.TabIndex = 7;
+            this.btnInsert.Text = "+";
+            this.btnInsert.UseVisualStyleBackColor = true;
             // 
             // udY
             // 
@@ -174,13 +174,13 @@
             this.udX.Size = new System.Drawing.Size(75, 20);
             this.udX.TabIndex = 5;
             // 
-            // txtCidade
+            // txtCity
             // 
-            this.txtCidade.Location = new System.Drawing.Point(56, 71);
-            this.txtCidade.MaxLength = 15;
-            this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(100, 20);
-            this.txtCidade.TabIndex = 4;
+            this.txtCity.Location = new System.Drawing.Point(56, 71);
+            this.txtCity.MaxLength = 15;
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(100, 20);
+            this.txtCity.TabIndex = 4;
             // 
             // label3
             // 
@@ -205,109 +205,110 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(7, 74);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.Size = new System.Drawing.Size(27, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Cidade:";
+            this.label1.Text = "City:";
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.groupBox1.Controls.Add(this.btnLerArquivo);
-            this.groupBox1.Controls.Add(this.rbHashDuplo);
-            this.groupBox1.Controls.Add(this.rbHashQuadratico);
-            this.groupBox1.Controls.Add(this.rbHashLinear);
-            this.groupBox1.Controls.Add(this.rbBucketHash);
+            this.groupBox1.Controls.Add(this.btnOpenFile);
+            this.groupBox1.Controls.Add(this.rbDoubleHashing);
+            this.groupBox1.Controls.Add(this.rbQuadraticProbing);
+            this.groupBox1.Controls.Add(this.rbLinearProbing);
+            this.groupBox1.Controls.Add(this.rbBucketHashing);
             this.groupBox1.Location = new System.Drawing.Point(4, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1857, 54);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = " Técnica de Hash desejada ";
+            this.groupBox1.Text = "Selected hashing technique";
             // 
-            // btnLerArquivo
+            // btnOpenFile
             // 
-            this.btnLerArquivo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLerArquivo.AutoSize = true;
-            this.btnLerArquivo.Location = new System.Drawing.Point(1775, 16);
-            this.btnLerArquivo.Name = "btnLerArquivo";
-            this.btnLerArquivo.Size = new System.Drawing.Size(76, 23);
-            this.btnLerArquivo.TabIndex = 4;
-            this.btnLerArquivo.Text = "Abrir arquivo";
-            this.btnLerArquivo.UseVisualStyleBackColor = true;
-            this.btnLerArquivo.Click += new System.EventHandler(this.btnLerArquivo_Click);
+            this.btnOpenFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnOpenFile.AutoSize = true;
+            this.btnOpenFile.Location = new System.Drawing.Point(1775, 16);
+            this.btnOpenFile.Name = "btnOpenFile";
+            this.btnOpenFile.Size = new System.Drawing.Size(76, 23);
+            this.btnOpenFile.TabIndex = 4;
+            this.btnOpenFile.Text = "Open File";
+            this.btnOpenFile.UseVisualStyleBackColor = true;
+            this.btnOpenFile.Click += new System.EventHandler(this.btnOpenFile_Click);
             // 
-            // rbHashDuplo
+            // rbDoubleHashing
             // 
-            this.rbHashDuplo.AutoSize = true;
-            this.rbHashDuplo.Location = new System.Drawing.Point(374, 19);
-            this.rbHashDuplo.Name = "rbHashDuplo";
-            this.rbHashDuplo.Size = new System.Drawing.Size(81, 17);
-            this.rbHashDuplo.TabIndex = 3;
-            this.rbHashDuplo.Text = "Hash Duplo";
-            this.rbHashDuplo.UseVisualStyleBackColor = true;
+            this.rbDoubleHashing.AutoSize = true;
+            this.rbDoubleHashing.Location = new System.Drawing.Point(374, 19);
+            this.rbDoubleHashing.Name = "rbDoubleHashing";
+            this.rbDoubleHashing.Size = new System.Drawing.Size(101, 17);
+            this.rbDoubleHashing.TabIndex = 3;
+            this.rbDoubleHashing.Text = "Double Hashing";
+            this.rbDoubleHashing.UseVisualStyleBackColor = true;
             // 
-            // rbHashQuadratico
+            // rbQuadraticProbing
             // 
-            this.rbHashQuadratico.AutoSize = true;
-            this.rbHashQuadratico.Location = new System.Drawing.Point(225, 19);
-            this.rbHashQuadratico.Name = "rbHashQuadratico";
-            this.rbHashQuadratico.Size = new System.Drawing.Size(131, 17);
-            this.rbHashQuadratico.TabIndex = 2;
-            this.rbHashQuadratico.Text = "Sondagem Quadrática";
-            this.rbHashQuadratico.UseVisualStyleBackColor = true;
+            this.rbQuadraticProbing.AutoSize = true;
+            this.rbQuadraticProbing.Location = new System.Drawing.Point(246, 19);
+            this.rbQuadraticProbing.Name = "rbQuadraticProbing";
+            this.rbQuadraticProbing.Size = new System.Drawing.Size(110, 17);
+            this.rbQuadraticProbing.TabIndex = 2;
+            this.rbQuadraticProbing.Text = "Quadratic Probing";
+            this.rbQuadraticProbing.UseVisualStyleBackColor = true;
             // 
-            // rbHashLinear
+            // rbLinearProbing
             // 
-            this.rbHashLinear.AutoSize = true;
-            this.rbHashLinear.Location = new System.Drawing.Point(111, 19);
-            this.rbHashLinear.Name = "rbHashLinear";
-            this.rbHashLinear.Size = new System.Drawing.Size(108, 17);
-            this.rbHashLinear.TabIndex = 1;
-            this.rbHashLinear.Text = "Sondagem Linear";
-            this.rbHashLinear.UseVisualStyleBackColor = true;
+            this.rbLinearProbing.AutoSize = true;
+            this.rbLinearProbing.Location = new System.Drawing.Point(135, 19);
+            this.rbLinearProbing.Name = "rbLinearProbing";
+            this.rbLinearProbing.Size = new System.Drawing.Size(93, 17);
+            this.rbLinearProbing.TabIndex = 1;
+            this.rbLinearProbing.Text = "Linear Probing";
+            this.rbLinearProbing.UseVisualStyleBackColor = true;
             // 
-            // rbBucketHash
+            // rbBucketHashing
             // 
-            this.rbBucketHash.AutoSize = true;
-            this.rbBucketHash.Checked = true;
-            this.rbBucketHash.Location = new System.Drawing.Point(16, 19);
-            this.rbBucketHash.Name = "rbBucketHash";
-            this.rbBucketHash.Size = new System.Drawing.Size(87, 17);
-            this.rbBucketHash.TabIndex = 0;
-            this.rbBucketHash.TabStop = true;
-            this.rbBucketHash.Text = "Bucket Hash";
-            this.rbBucketHash.UseVisualStyleBackColor = true;
+            this.rbBucketHashing.AutoSize = true;
+            this.rbBucketHashing.Checked = true;
+            this.rbBucketHashing.Location = new System.Drawing.Point(16, 19);
+            this.rbBucketHashing.Name = "rbBucketHashing";
+            this.rbBucketHashing.Size = new System.Drawing.Size(101, 17);
+            this.rbBucketHashing.TabIndex = 0;
+            this.rbBucketHashing.TabStop = true;
+            this.rbBucketHashing.Text = "Bucket Hashing";
+            this.rbBucketHashing.UseVisualStyleBackColor = true;
             // 
-            // tpCaminhos
+            // tpPaths
             // 
-            this.tpCaminhos.Location = new System.Drawing.Point(4, 22);
-            this.tpCaminhos.Name = "tpCaminhos";
-            this.tpCaminhos.Padding = new System.Windows.Forms.Padding(3);
-            this.tpCaminhos.Size = new System.Drawing.Size(673, 335);
-            this.tpCaminhos.TabIndex = 1;
-            this.tpCaminhos.Text = "Caminhos";
-            this.tpCaminhos.UseVisualStyleBackColor = true;
+            this.tpPaths.Location = new System.Drawing.Point(4, 22);
+            this.tpPaths.Name = "tpPaths";
+            this.tpPaths.Padding = new System.Windows.Forms.Padding(3);
+            this.tpPaths.Size = new System.Drawing.Size(1863, 674);
+            this.tpPaths.TabIndex = 1;
+            this.tpPaths.Text = "Paths";
+            this.tpPaths.UseVisualStyleBackColor = true;
             // 
-            // dlgAbrir
+            // dlgOpen
             // 
-            this.dlgAbrir.DefaultExt = "*.txt";
-            this.dlgAbrir.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            this.dlgOpen.DefaultExt = "*.txt";
+            this.dlgOpen.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
-            // FrmCaminhos
+            // FrmPaths
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1874, 702);
             this.Controls.Add(this.tabControl1);
-            this.Name = "FrmCaminhos";
-            this.Text = "Caminhos em Marte - Ra1 - Ra2";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCaminhos_FormClosing);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "FrmPaths";
+            this.Text = "Martian Pathways - 23513 - 23521";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPaths_FormClosing);
             this.tabControl1.ResumeLayout(false);
-            this.tpCidades.ResumeLayout(false);
-            this.tpCidades.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMapa)).EndInit();
+            this.tpCities.ResumeLayout(false);
+            this.tpCities.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.udY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.udX)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -319,27 +320,26 @@
     #endregion
 
     private System.Windows.Forms.TabControl tabControl1;
-    private System.Windows.Forms.TabPage tpCidades;
-    private System.Windows.Forms.TabPage tpCaminhos;
+    private System.Windows.Forms.TabPage tpCities;
+    private System.Windows.Forms.TabPage tpPaths;
     private System.Windows.Forms.GroupBox groupBox1;
-    private System.Windows.Forms.RadioButton rbHashDuplo;
-    private System.Windows.Forms.RadioButton rbHashQuadratico;
-    private System.Windows.Forms.RadioButton rbHashLinear;
-    private System.Windows.Forms.RadioButton rbBucketHash;
-    private System.Windows.Forms.Button btnLerArquivo;
+    private System.Windows.Forms.RadioButton rbDoubleHashing;
+    private System.Windows.Forms.RadioButton rbQuadraticProbing;
+    private System.Windows.Forms.RadioButton rbLinearProbing;
+    private System.Windows.Forms.RadioButton rbBucketHashing;
+    private System.Windows.Forms.Button btnOpenFile;
     private System.Windows.Forms.Label label3;
     private System.Windows.Forms.Label label2;
     private System.Windows.Forms.Label label1;
     private System.Windows.Forms.NumericUpDown udX;
-    private System.Windows.Forms.TextBox txtCidade;
+    private System.Windows.Forms.TextBox txtCity;
     private System.Windows.Forms.NumericUpDown udY;
-    private System.Windows.Forms.Button btnBuscar;
-    private System.Windows.Forms.Button btnRemover;
-    private System.Windows.Forms.Button btnInserir;
-    private System.Windows.Forms.Button btnListar;
-    private System.Windows.Forms.ListBox lsbCidades;
-    private System.Windows.Forms.PictureBox pbMapa;
-    private System.Windows.Forms.OpenFileDialog dlgAbrir;
+    private System.Windows.Forms.Button btnSearch;
+    private System.Windows.Forms.Button btnRemove;
+    private System.Windows.Forms.Button btnInsert;
+    private System.Windows.Forms.Button btnList;
+    private System.Windows.Forms.ListBox lsbCities;
+    private System.Windows.Forms.PictureBox pbMap;
+    private System.Windows.Forms.OpenFileDialog dlgOpen;
   }
 }
-
