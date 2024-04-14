@@ -32,18 +32,18 @@ public class LinearProbing<T> : IHashTable<T>
 		// Loop over hash table positions looking for an empty spot
 		while (data[currentPosition] != null)
 		{
-			// Hash table end was reached
-			if (currentPosition == data.Length - 1)
+            // No empty spot found after searching the entire hash table
+            if ((currentPosition == initialPosition) && hasReachedEnd)
+                break;
+            // Hash table end was reached
+            if (currentPosition == data.Length - 1)
 			{
 				currentPosition = 0;
 				hasReachedEnd = true;
+				continue;
 			}
-			// No empty spot found after searching the entire hash table
-			if ((currentPosition == initialPosition) && hasReachedEnd)
-				 return initialPosition;
 			// Keep looking for an empty spot
-			else
-				currentPosition++;
+			currentPosition++;
 		}
 		return currentPosition;
 	}
