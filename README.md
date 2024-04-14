@@ -1,2 +1,3 @@
-# caminhos-em-marte
-Projeto desenvolvido ao longo de 2024 na disciplina de Estruturas de Dados
+# martian-pathway
+
+Project developed during 2024 for the Data Structures course
