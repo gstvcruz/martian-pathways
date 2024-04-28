@@ -36,15 +36,15 @@ class BucketHashing<T> : IHashTable<T>
     public void Insert(T item)
     {
         // Insert an item if not already
-        int itemHashValue = Hash(item.Key);
-        if (!data[itemHashValue].Contains(item))
-            data[itemHashValue].Add(item);
+        int itemPosition;
+        if (!Exists(item, out itemPosition))
+            data[itemPosition].Add(item);
     }
 
     public bool Remove(T item)
     {
         // Removes an item if found
-        int itemPosition = 0;
+        int itemPosition;
         if (!Exists(item, out itemPosition))
             return false;
         data[itemPosition].Remove(item);
@@ -62,9 +62,9 @@ class BucketHashing<T> : IHashTable<T>
     {
         // Lists the contents for each bucket that has at least one value
         List<T> content = new List<T>();
-        for (int i = 0; i < data.Length; i++)
-            if (data[i].Count > 0)
-                foreach (T item in data[i])
+        foreach (ArrayList bucket in data)
+            if (bucket.Count > 0)
+                foreach (T item in bucket)
                     content.Add(item);
         return content;
     }

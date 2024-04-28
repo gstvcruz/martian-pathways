@@ -293,7 +293,6 @@
             // dlgOpen
             // 
             this.dlgOpen.DefaultExt = "*.txt";
-            this.dlgOpen.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // FrmPaths
             // 
