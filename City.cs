@@ -32,7 +32,7 @@ public class City : IRegistry<City>
         set
         {
             if (value < 0 || value > 1)
-                throw new ArgumentOutOfRangeException("X out of 0 to 1 interval");
+                throw new ArgumentOutOfRangeException("Coordinate X must be between 0.99999 and 0.00000.");
             x = value;
         }
     }
@@ -43,7 +43,7 @@ public class City : IRegistry<City>
         set
         {
             if (value < 0 || value > 1)
-                throw new ArgumentOutOfRangeException("Y out of 0 to 1 interval");
+                throw new ArgumentOutOfRangeException("Coordinate Y must be between 0.99999 and 0.00000.");
             y = value;
         }
     }
@@ -71,6 +71,6 @@ public class City : IRegistry<City>
 
     public override string ToString()
     {
-        return CityName + X + Y;
+        return CityName + X.ToString("0.00000") + Y.ToString("0.00000");
     }
 }
