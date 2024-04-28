@@ -32,7 +32,7 @@ public class City : IRegistry<City>
         set
         {
             if (value < 0 || value > 1)
-                throw new Exception("X out of 0 to 1 interval");
+                throw new ArgumentOutOfRangeException("X out of 0 to 1 interval");
             x = value;
         }
     }
@@ -43,7 +43,7 @@ public class City : IRegistry<City>
         set
         {
             if (value < 0 || value > 1)
-                throw new Exception("Y out of 0 to 1 interval");
+                throw new ArgumentOutOfRangeException("Y out of 0 to 1 interval");
             y = value;
         }
     }
@@ -51,7 +51,7 @@ public class City : IRegistry<City>
     public void WriteData(StreamWriter file)
     {
         if (file != null)
-            file.WriteLine($"{CityName}{X:7.5f}{Y:7.5f}");
+            file.WriteLine(ToString());
     }
 
     public void ReadRegistry(StreamReader file)
@@ -71,6 +71,6 @@ public class City : IRegistry<City>
 
     public override string ToString()
     {
-        return CityName + " " + X + " " + Y;
+        return CityName + X + Y;
     }
 }

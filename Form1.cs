@@ -48,12 +48,6 @@ namespace apMartianPathways
 
         private void FrmPaths_FormClosing(object sender, FormClosingEventArgs e)
         {
-            // abrir o file para saida, se houver um file selecionado
-            // obter todo o conteúdo da table de hash
-            // percorrer o conteúdo da table de hash, acessando
-            // cada cidade individualmente e usar esse objeto Cidade
-            // para gravar seus próprios dados no file
-            // fechar o file ao final do percurso
             if (fileName == null)
                 return;
 
