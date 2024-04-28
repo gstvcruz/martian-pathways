@@ -39,10 +39,7 @@ namespace apMartianPathways
                 city.ReadRegistry(file);
                 table.Insert(city);
             }
-            lsbCities.Items.Clear();
-            var cities = table.Content();
-            foreach (City c in cities)
-                lsbCities.Items.Add(c);
+            UpdateLsbCities();
             file.Close();
         }
 
@@ -68,10 +65,7 @@ namespace apMartianPathways
                 city.Y = (double)udY.Value;
 
                 table.Insert(city);
-                lsbCities.Items.Clear();
-                var cities = table.Content();
-                foreach (City c in cities)
-                    lsbCities.Items.Add(c);
+                UpdateLsbCities();
             }
             catch (NullReferenceException)
             {
@@ -104,6 +98,14 @@ namespace apMartianPathways
         private void btnList_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void UpdateLsbCities()
+        {
+            lsbCities.Items.Clear();
+            var cities = table.Content();
+            foreach (City c in cities)
+                lsbCities.Items.Add(c);
         }
     }
 }
