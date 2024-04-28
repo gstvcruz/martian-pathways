@@ -1,4 +1,21 @@
-.txt
-.jpg
-.png
-/.vs
+# File extensions
+*.txt
+*.jpg
+*.png
+*.ico
+*.csproj*
+*.sln
+
+# Hidden directories
+.vs
+.vscode
+
+# Directories
+Properties
+obj
+bin/Debug
+
+# Files
+App.config
+Form1.Designer.cs
+Form1.resx
