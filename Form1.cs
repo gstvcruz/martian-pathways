@@ -60,7 +60,35 @@ namespace apMartianPathways
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
+            try
+            {
+                City city = new City();
+                city.CityName = txtCity.Text;
+                city.X = (double)udX.Value;
+                city.Y = (double)udY.Value;
 
+                table.Insert(city);
+                lsbCities.Items.Clear();
+                var cities = table.Content();
+                foreach (City c in cities)
+                    lsbCities.Items.Add(c);
+            }
+            catch (NullReferenceException)
+            {
+                string msg = "There's no opened file to save this city.";
+                string cap = "File not found";
+                MessageBoxButtons btn = MessageBoxButtons.OK;
+                MessageBoxIcon ico = MessageBoxIcon.Error;
+                MessageBox.Show(msg, cap, btn, ico);
+            }
+            catch (ArgumentOutOfRangeException _e)
+            {
+                string msg = _e.Message;
+                string cap = "Coordinate out of bounds";
+                MessageBoxButtons btn = MessageBoxButtons.OK;
+                MessageBoxIcon ico = MessageBoxIcon.Error;
+                MessageBox.Show(msg, cap, btn, ico);
+            }
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
