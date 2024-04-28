@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 
@@ -7,7 +8,7 @@ namespace apMartianPathways
     public partial class FrmPaths : Form
     {
         IHashTable<City> table;
-
+        string fileName = null;
         public FrmPaths()
         {
             InitializeComponent();
@@ -30,7 +31,8 @@ namespace apMartianPathways
                         if (rbDoubleHashing.Checked)
                             table = new DoubleHashing<City>();
 
-            var file = new StreamReader(dlgOpen.FileName);
+            fileName = dlgOpen.FileName;
+            var file = new StreamReader(fileName);
             while (!file.EndOfStream)
             {
                 City city = new City();
@@ -52,6 +54,34 @@ namespace apMartianPathways
             // cada cidade individualmente e usar esse objeto Cidade
             // para gravar seus próprios dados no file
             // fechar o file ao final do percurso
+            if (fileName == null)
+                return;
+
+            var file = new StreamWriter(fileName);
+            List<City> cities = table.Content();
+            foreach (City c in cities)
+                c.WriteData(file);
+            file.Close();
+        }
+
+        private void btnInsert_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnList_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
