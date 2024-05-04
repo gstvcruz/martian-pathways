@@ -50,9 +50,9 @@ public class LinearProbing<T> : IHashTable<T>
 
 	public void Insert(T item)
 	{
-		int itemHashValue;
-		if (!Exists(item, out itemHashValue))
-			data[itemHashValue] = item;
+		int itemPosition;
+		if (!Exists(item, out itemPosition))
+			data[itemPosition] = item;
 	}
 
 	public bool Remove(T item)

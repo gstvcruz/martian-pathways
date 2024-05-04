@@ -31,24 +31,20 @@ public class QuadraticProbing<T> : IHashTable<T>
         if ((data[initialPosition] == null) || (Content().Count >= SIZE / 2))
             return initialPosition;
 
-        double currentPosition = initialPosition;
-        double collisions = 1;
+        int currentPosition = initialPosition;
+        int collisions = 1;
         // Loop over hash table positions looking for an empty spot
-        while (data[(int)currentPosition] != null)
-        {
+        while (data[currentPosition] != null)
             // Keep looking for an empty spot
-            currentPosition = (currentPosition + Math.Pow(currentPosition, collisions++)) % SIZE;
-            if (currentPosition % SIZE >= SIZE)
-                return initialPosition;
-        }
-        return (int)currentPosition;
+            currentPosition = (currentPosition + (int)Math.Pow(collisions++, 2)) % SIZE;
+        return currentPosition;
     }
 
     public void Insert(T item)
     {
-        int itemHashValue;
-        if (!Exists(item, out itemHashValue))
-            data[itemHashValue] = item;
+        int itemPosition;
+        if (!Exists(item, out itemPosition))
+            data[itemPosition] = item;
     }
 
     public bool Remove(T item)
